@@ -10,7 +10,7 @@ bincode = "1.3.3"
 commit-chain = { path = "../../crates/commit-chain" }
 
 # Ziren
-zkm-zkvm = { git = "https://github.com/ProjectZKM/Ziren", features = ["verify"] }
+zkm-zkvm = { git = "https://github.com/ProjectZKM/Ziren", tag = "v2.0.0", features = ["verify"] }
 #zkm-zkvm = { path = "../../../../Ziren/crates/zkvm/entrypoint", features = ["verify"] }
 
 # Statically turns off logging

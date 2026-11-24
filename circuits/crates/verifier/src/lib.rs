@@ -122,9 +122,7 @@ pub fn verify_groth16_proof(
 mod tests {
     use super::*;
 
-    /// Pins the Groth16 statement to Ziren `a4d47079` (circuit version v2.0.0). The Ziren dependency
-    /// has no tag or rev, so a `cargo update` could otherwise move the wrap vk or the recursion vk
-    /// root without a reviewable diff. Update these only together with a deliberate Ziren upgrade.
+    /// Pins the wrap VK and recursion VK root used by the Groth16 statement to Ziren `v2.0.0`.
     #[test]
     fn ziren_wrap_vk_and_vk_root_are_pinned() {
         let imm_vk_hash: [u8; 32] = Sha256::digest(*IMM_GROTH16_VK_BYTES).into();
